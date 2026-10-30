@@ -12,3 +12,17 @@ main {
   margin: 0 auto;
   padding: 24px;
 }
+.work {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+}
+
+.work img {
+  width: 100%;
+}
+@media (max-width: 640px) {
+  .work {
+    grid-template-columns: 1fr;
+  }
+}
