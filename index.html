@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>渋谷勇輝 Portfolio</title>
+    <title>渋谷勇輝 ポートフォリオ</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-    <div class="container fade-in-section">
-        <h1>Yuki's Portfolio</h1>
-    </div>
+        <div class="container fade-in-section">
+            <h1>Yuki's Portfolio</h1>
+            <p class="affiliation">大阪公立大学工業高等専門学校</p>
+        </div>
     </header>
 
     <main class="container">
         <section id="about" class="fade-in-section">
             <h2>自己紹介</h2>
-            <p>大阪公立大学工業高等専門学校２年の渋谷勇輝です。知能情報コースを学んでいます。</p>
-            <p>年齢：17歳</p>
-            <p>趣味：ゲーム(Valorant,Minecraft)、アニメ(OnePiece)、釣り、絵描き</p>
+            <p>大阪公立大学工業高等専門学校 知能情報コース2年の渋谷勇輝（17歳）です。</p>
+            <p>プログラミング基礎や情報工学を学んでいます。</p>
+            <p style="margin-top: 8px;">趣味：ゲーム (Valorant, Minecraft)、アニメ (One Piece)、釣り、絵描き</p>
         </section>
 
         <section id="skills" class="fade-in-section">
-            <h2>スキル</h2>
-            <div class="skill-list">
-                <span class="skill-tag">HTML (学習中)</span>
-                <span class="skill-tag">CSS (学習中)</span>
-                <span class="skill-tag">JavaScript (学習中)</span>
-                <span class="skill-tag">Git (学習中)</span>
-                <span class="skill-tag">C言語 (学習中)</span>
-                <span class="skill-tag">Python (学習中)</span>
+            <h2>スキル・使用経験</h2>
+            <div class="skill-category">
+                <h3 class="skill-subtitle">プログラミング言語</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">HTML (学習中)</span>
+                    <span class="skill-tag">CSS (学習中)</span>
+                    <span class="skill-tag">JavaScript (学習中)</span>
+                    <span class="skill-tag">C言語 (学習中)</span>
+                    <span class="skill-tag">Python (授業レベル)</span>
+                    <span class="skill-tag">Arduino言語 (授業レベル)</span>
+                    <span class="skill-tag">Scratch (授業レベル)</span>
+                </div>
+            </div>
+            <div class="skill-category" style="margin-top: 20px;">
+                <h3 class="skill-subtitle">ソフトウェア / 開発ツール</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Git / GitHub</span>
+                    <span class="skill-tag">VSCode (venvによるPython開発)</span>
+                    <span class="skill-tag">WSL (Windows Subsystem for Linux)</span>
+                    <span class="skill-tag">Arduino IDE</span>
+                    <span class="skill-tag">Deeds-DCS</span>
+                    <span class="skill-tag">MakeCode for micro:bit</span>
+                    <span class="skill-tag">Tinkercad</span>
+                </div>
             </div>
         </section>
 
@@ -43,28 +60,48 @@
 
         <section id="works" class="fade-in-section">
             <h2>プロジェクト</h2>
-            <article class="work-card highlight">
+
+            <article class="work-card highlight" style="margin-bottom: 40px;">
                 <div class="work-header">
-                    <h3>Eat It（食材管理アプリ）</h3>
-                    <p class="work-subtitle">2年生 総合課題実習 / チーム開発作品</p>
+                    <h3>課題04：ブラックジャック</h3>
+                    <p class="work-subtitle">Python自由課題制作作品</p>
                 </div>
                 
                 <div class="work-body">
                     <div class="work-gallery">
-                        <figure>
-                            <img alt="Eat It ホーム画面" src="images/eatit1.png">
-                        </figure>
-                        <figure>
-                            <img alt="食材登録画面" src="images/eatit2.png">
-                        </figure>
-                        <figure>
-                            <img alt="食材一覧画面" src="images/eatit4.png">
-                        </figure>
+                        <figure><img alt="課題04 実行画面1" src="images/pro1.png"></figure>
+                        <figure><img alt="課題04 実行画面2" src="images/pro2.png"></figure>
+                        <figure><img alt="課題04 実行画面3" src="images/pro3.png"></figure>
+                        <figure><img alt="課題04 実行画面4" src="images/pro4.png"></figure>
+                    </div>
+
+                    <div class="work-details">
+                        <p><strong>概要:</strong> ブラックジャックというカジノゲームをPythonで実装したものです。</p>
+                        <p><strong>使用技術:</strong> Python (Google Colab)</p>
+                        <p><strong>プログラムリンク:</strong> 
+                            <a href="https://colab.research.google.com/drive/1KAQwJELDqluGmB8KOm6sII9Vkp188HiV?usp=sharing" target="_blank" rel="noopener">Google Colabでプログラムを見る</a>
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card highlight">
+                <div class="work-header">
+                    <h3>Eat It（食材管理アプリ）</h3>
+                    <p class="work-subtitle">2年生 総合課題実習 / 高専祭展示 チーム開発作品</p>
+                </div>
+                
+                <div class="work-body">
+                    <div class="work-gallery">
+                        <figure><img alt="Eat It ホーム画面" src="images/eatit1.png"></figure>
+                        <figure><img alt="食材登録画面" src="images/eatit2.png"></figure>
+                        <figure><img alt="食材登録詳細" src="images/eatit3.png"></figure>
+                        <figure><img alt="食材一覧画面" src="images/eatit4.png"></figure>
                     </div>
 
                     <div class="work-details">
                         <p><strong>概要:</strong> 家庭の食品ロスや重複買いを防ぐため、撮影した食材の量・賞味期限・通知日を登録・管理できるWebアプリケーション。</p>
-                        <p><strong>担当範囲:</strong> フロントエンド全般（キッチン風UIのデザイン設計、HTML/CSSによる画面実装、JavaScriptによる動的UI制御）</p>
+                        <p><strong>担当範囲・役割:</strong> フロントエンド全般（キッチン風UIのデザイン設計、HTML/CSSによる画面実装、JavaScriptによる動的UI制御）</p>
                         <p><strong>使用技術:</strong></p>
                         <div class="work-tags">
                             <span class="tag">HTML</span>
@@ -90,8 +127,6 @@
             <p>&copy; 2026 Yuki Shibuya</p>
         </div>
     </footer>
-
-    <!-- スクロールアニメーション用スクリプト -->
     <script src="script.js"></script>
 </body>
 </html>

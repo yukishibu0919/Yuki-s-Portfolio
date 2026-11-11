@@ -1,15 +1,13 @@
-/* --- カラーパレットの定義 --- */
 :root {
-    --color-bg: #F2EFE8;          /* 主要背景（オフホワイト） */
-    --color-bg-dark: #1F2A44;     /* ヘッダー・カード背景（ミディアムネイビー） */
-    --color-text: #0B1320;        /* 主要テキスト（濃いネイビー） */
-    --color-text-light: #F2EFE8;  /* 暗い背景用テキスト（オフホワイト） */
-    --color-text-sub: #C7B8A6;    /* セカンダリテキスト（ライトベージュ） */
-    --color-accent: #B46A55;      /* アクセント（テラコッタ） */
-    --color-card-border: #E0E0E0;  /* カード境界線 */
+    --color-bg: #F2EFE8;
+    --color-bg-dark: #1F2A44;
+    --color-text: #0B1320;
+    --color-text-light: #F2EFE8;
+    --color-text-sub: #C7B8A6;
+    --color-accent: #B46A55;
+    --color-card-border: #E0E0E0;
 }
 
-/* --- 全般スタイル --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -32,7 +30,7 @@ body {
 
 a {
     color: var(--color-accent);
-    text-decoration: none;
+    text-decoration: underline;
     transition: opacity 0.3s;
 }
 
@@ -44,7 +42,6 @@ ul {
     list-style: none;
 }
 
-/* --- ヘッダー --- */
 header {
     background-color: var(--color-bg-dark);
     color: var(--color-text-light);
@@ -63,13 +60,16 @@ header h1 {
     color: var(--color-text-sub);
 }
 
-/* --- メインコンテンツ --- */
 main {
-    padding: 60px 0;
+    padding-bottom: 60px;
 }
 
 section {
     margin-bottom: 70px;
+}
+
+#about {
+    margin-top: 50px;
 }
 
 h2 {
@@ -81,7 +81,12 @@ h2 {
     display: inline-block;
 }
 
-/* --- スキル --- */
+.skill-subtitle {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
 .skill-list {
     display: flex;
     flex-wrap: wrap;
@@ -93,10 +98,9 @@ h2 {
     color: var(--color-text-light);
     padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
-/* --- 資格 --- */
 .qualification-list li {
     font-size: 1.05rem;
     position: relative;
@@ -110,7 +114,6 @@ h2 {
     left: 0;
 }
 
-/* --- プロジェクト --- */
 .work-card {
     background-color: var(--color-bg-dark);
     color: var(--color-text-light);
@@ -131,10 +134,9 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* 画像ギャラリー */
 .work-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
     margin-bottom: 25px;
 }
@@ -154,7 +156,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* タグ */
 .work-tags {
     display: flex;
     flex-wrap: wrap;
@@ -170,13 +171,11 @@ h2 {
     font-size: 0.8rem;
 }
 
-/* --- 連絡先 --- */
 .contact-list li {
     font-size: 1.1rem;
     margin-bottom: 12px;
 }
 
-/* --- フッター --- */
 footer {
     background-color: var(--color-bg-dark);
     color: var(--color-text-light);
@@ -185,7 +184,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- スクロールフェードインアニメーション --- */
 .fade-in-section {
     opacity: 0;
     transform: translateY(30px);
@@ -196,9 +194,4 @@ footer {
 .fade-in-section.is-visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* 自己紹介セクションの上部に隙間を追加 */
-#about {
-    margin-top: 40px; /* 数値を大きくすると隙間が広がります */
 }
