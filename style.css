@@ -1,28 +1,204 @@
-body {
-  color: #1f2a44;
-  background-color: #f2efe8;
-}
-body {
-  font-family: sans-serif;
-  line-height: 1.8;
-  margin: 0;
-}
-main {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 24px;
-}
-.work {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 24px;
+/* --- カラーパレットの定義 --- */
+:root {
+    --color-bg: #F2EFE8;          /* 主要背景（オフホワイト） */
+    --color-bg-dark: #1F2A44;     /* ヘッダー・カード背景（ミディアムネイビー） */
+    --color-text: #0B1320;        /* 主要テキスト（濃いネイビー） */
+    --color-text-light: #F2EFE8;  /* 暗い背景用テキスト（オフホワイト） */
+    --color-text-sub: #C7B8A6;    /* セカンダリテキスト（ライトベージュ） */
+    --color-accent: #B46A55;      /* アクセント（テラコッタ） */
+    --color-card-border: #E0E0E0;  /* カード境界線 */
 }
 
-.work img {
-  width: 100%;
+/* --- 全般スタイル --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-@media (max-width: 640px) {
-  .work {
-    grid-template-columns: 1fr;
-  }
+
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- ヘッダー --- */
+header {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 60px 0;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.affiliation {
+    font-size: 1.1rem;
+    color: var(--color-text-sub);
+}
+
+/* --- メインコンテンツ --- */
+main {
+    padding: 60px 0;
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--color-accent);
+    margin-bottom: 24px;
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+/* --- スキル --- */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill-tag {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* --- 資格 --- */
+.qualification-list li {
+    font-size: 1.05rem;
+    position: relative;
+    padding-left: 20px;
+}
+
+.qualification-list li::before {
+    content: "✔";
+    color: var(--color-accent);
+    position: absolute;
+    left: 0;
+}
+
+/* --- プロジェクト --- */
+.work-card {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+.work-card h3 {
+    font-size: 1.6rem;
+    color: var(--color-accent);
+    margin-bottom: 5px;
+}
+
+.work-subtitle {
+    color: var(--color-text-sub);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* 画像ギャラリー */
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.work-gallery figure {
+    margin: 0;
+}
+
+.work-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.work-details p {
+    margin-bottom: 10px;
+}
+
+/* タグ */
+.work-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.work-tags .tag {
+    background-color: var(--color-accent);
+    color: var(--color-text-light);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+/* --- 連絡先 --- */
+.contact-list li {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+}
+
+/* --- フッター --- */
+footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- スクロールフェードインアニメーション --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 自己紹介セクションの上部に隙間を追加 */
+#about {
+    margin-top: 40px; /* 数値を大きくすると隙間が広がります */
 }

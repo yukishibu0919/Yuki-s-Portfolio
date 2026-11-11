@@ -1,52 +1,96 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>渋谷勇輝 | ポートフォリオ</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>渋谷勇輝 Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>渋谷勇輝</h1>
-        <p>大阪公立大学工業高等専門学校・2年知能情報コース</p>
+    <div class="container fade-in-section">
+        <h1>Yuki's Portfolio</h1>
+    </div>
     </header>
-    <main>
-        <section id="about">
+
+    <main class="container">
+        <section id="about" class="fade-in-section">
             <h2>自己紹介</h2>
-            <p>私は渋谷勇輝です。大阪公立大学工業高等専門学校で知能情報コースを学んでいます。</p>
+            <p>大阪公立大学工業高等専門学校２年の渋谷勇輝です。知能情報コースを学んでいます。</p>
+            <p>趣味：プログラミング、ゲーム、アニメ</p>
         </section>
-        <section id="works">
-            <h3>作品</h3>
-            <p>2年生の総合課題実習でチームで協力し、アプリを作成しました。</p>
-            <article class="work">
-                <img src="images/eatit1.png" alt="Eat Itのホームページ">
-                <div>
-                    <h3>Eat Itのホームページ</h3>
+
+        <section id="skills" class="fade-in-section">
+            <h2>スキル</h2>
+            <div class="skill-list">
+                <span class="skill-tag">HTML5 (学習中)</span>
+                <span class="skill-tag">CSS3 (学習中)</span>
+                <span class="skill-tag">JavaScript (学習中)</span>
+                <span class="skill-tag">Git (学習中)</span>
+                <span class="skill-tag">C言語 (学習中)</span>
+                <span class="skill-tag">Python (学習中)</span>
+            </div>
+        </section>
+
+        <section id="qualifications" class="fade-in-section">
+            <h2>資格</h2>
+            <ul class="qualification-list">
+                <li>実用英語技能検定（英検）準2級</li>
+            </ul>
+        </section>
+
+        <section id="works" class="fade-in-section">
+            <h2>プロジェクト</h2>
+            <article class="work-card highlight">
+                <div class="work-header">
+                    <h3>Eat It（食材管理アプリ）</h3>
+                    <p class="work-subtitle">2年生 総合課題実習 / チーム開発作品</p>
                 </div>
-                <img src="images/eatit2.png" alt="食材登録画面">
-                <div>
-                    <h3>食材登録画面</h3>
-                    <p>食材を撮影し、量や賞味期限、通知日などの情報を登録できる。</p>
-                </div>
-                <img src="images/eatit4.png" alt="食材一覧">
-                <div>
-                    <h3>食材一覧</h3>
-                    <p>登録した食材を一覧で表示できる。</p>
+                
+                <div class="work-body">
+                    <div class="work-gallery">
+                        <figure>
+                            <img alt="Eat It ホーム画面" src="images/eatit1.png">
+                        </figure>
+                        <figure>
+                            <img alt="食材登録画面" src="images/eatit2.png">
+                        </figure>
+                        <figure>
+                            <img alt="食材一覧画面" src="images/eatit4.png">
+                        </figure>
+                    </div>
+
+                    <div class="work-details">
+                        <p><strong>概要:</strong> 家庭の食品ロスや重複買いを防ぐため、撮影した食材の量・賞味期限・通知日を登録・管理できるWebアプリケーション。</p>
+                        <p><strong>担当範囲:</strong> フロントエンド全般（キッチン風UIのデザイン設計、HTML/CSSによる画面実装、JavaScriptによる動的UI制御）</p>
+                        <p><strong>使用技術:</strong></p>
+                        <div class="work-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
                 </div>
             </article>
         </section>
-        <section id="history">
-            <h4>資格</h4>
-            <p>英検準2級</p>
-        </section>
-        <section id="contact">
-            <h5>連絡先</h5>
-            <p>メール: 25070r@st.omu.ac.jp</p>
+
+        <section id="contact" class="fade-in-section">
+            <h2>連絡先</h2>
+            <ul class="contact-list">
+                <li><strong>メール:</strong> 25070r@st.omu.ac.jp</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/yukishibu0919" target="_blank" rel="noopener">github.com/yukishibu0919</a></li>
+            </ul>
         </section>
     </main>
+
     <footer>
-        <p>2026 渋谷勇輝</p>
+        <div class="container">
+            <p>&copy; 2026 Yuki Shibuya</p>
+        </div>
     </footer>
+
+    <!-- スクロールアニメーション用スクリプト -->
+    <script src="script.js"></script>
 </body>
 </html>
